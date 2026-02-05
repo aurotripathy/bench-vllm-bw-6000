@@ -13,3 +13,30 @@ docker run --runtime nvidia --gpus all \
     --ipc=host \
     vllm/vllm-openai:latest \
     --model Qwen/Qwen3-0.6B
+
+
+vllm serve RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic
+
+podman run --rm -it --device nvidia.com/gpu=all -p 8000:8000 \
+ --ipc=host \
+--env "HUGGING_FACE_HUB_TOKEN=$HF_TOKEN" \
+--env "HF_HUB_OFFLINE=0" -v ~/.cache/vllm:/home/vllm/.cache \
+--name=vllm \
+registry.access.redhat.com/rhaiis/rh-vllm-cuda \
+vllm serve \
+--tensor-parallel-size 8 \
+--max-model-len 32768  \
+--enforce-eager --model RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic
+
+
+--gpus all \
+  --ipc=host \
+  -p 8000:8000 \
+  -v /home/openzeka/.cache/huggingface:/root/.cache/huggingface:rw \
+  -e HF_TOKEN=<TOKEN> \
+  vllm/vllm-openai:v0.9.1 \
+  --max-model-len 1024 \
+  --gpu-memory-utilization 0.95 \
+  --max-num-seqs 1 \
+  --tensor-parallel-size 2 \
+  --model deepseek-ai/DeepSeek-R1-Distill-Llama-8B
