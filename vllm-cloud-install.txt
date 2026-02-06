@@ -88,3 +88,15 @@ change to gpu
    13  source collect-data.sh 
    14  pip install datasets
    15  source collect-data.sh 
+
+0. check you have $$$
+1. ensure disk size is 200GB 
+2. check for running vllm in nvidia-smi 
+3. pkill -f vllm && sleep 2 && pgrep -af vllm 
+4. vllm serve --model RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic --max-model-len 32000
+5. git clone https://github.com/aurotripathy/bench-vllm-bw-6000.git
+6. install emacs
+7. edit the jio script file to select benchmarks
+8. source script_run_jio.sh llama-70b-fp8-dynamic-result/ 8000 > bench.log
+
+9 when done, checkin the results folder ans the bench.log file
