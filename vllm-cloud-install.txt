@@ -15,7 +15,9 @@ docker run --runtime nvidia --gpus all \
     --model Qwen/Qwen3-0.6B
 
 
-vllm serve RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic
+vllm  --gpus all \
+    --gpu-memory-utilization 0.95
+    serve RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic
 
 podman run --rm -it --device nvidia.com/gpu=all -p 8000:8000 \
  --ipc=host \
@@ -40,3 +42,49 @@ vllm serve \
   --max-num-seqs 1 \
   --tensor-parallel-size 2 \
   --model deepseek-ai/DeepSeek-R1-Distill-Llama-8B
+
+
+mkdir vllm ; cd vllm
+uv venv --python 3.12 --seed
+. .venv/bin/activate
+uv pip install -U vllm --torch-backend auto
+export CUDA_VISIBLE_DEVICES=0,1
+vllm serve chriswritescode/Qwen3-235B-A22B-Instruct-2507-INT4-W4A16 --max-model-len 32768 --port 8080 -tp 2 --gpu-memory-utilization 0.95
+
+what worked
+-----------
+200GB Disk
+vllm serve --model RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic --max-model-len 32000
+
+curl test
+---------
+curl http://localhost:8000/v1/chat/completions \
+    -H "Content-Type: application/json" \
+    -d '{
+    "model": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic",
+    "messages": [{"role": "user", "content": "What is the capital of France?"}]
+    }' \
+    | python -m json.tool
+
+
+    {"date": "20260205-202257", "backend": "vllm", "model_id": "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic", "tokenizer_id": 
+    "RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic", "num_prompts": 500, "request_rate": "inf", "burstiness": 1.0, "max_concurrency": 25, "duration": 117.22554990369827, 
+    "completed": 500, "total_input_tokens": 250000, "total_output_tokens": 25000, "request_throughput": 4.265281761618982, "request_goodput:": null, 
+    "output_throughput": 213.26408808094908, "total_token_throughput": 2345.90496889044, "mean_ttft_ms": 2318.0570510067046, "median_ttft_ms": 2338.7405737303197, 
+    "std_ttft_ms": 761.9320802159103, "p25_ttft_ms": 2249.7469633817673, "p50_ttft_ms": 2338.7405737303197, "p75_ttft_ms": 3013.5734684299678, 
+    "p90_ttft_ms": 3150.4044488072395, "p95_ttft_ms": 3207.175381947309, "p99_ttft_ms": 3211.772979674861, "mean_tpot_ms": 72.20331008055683, 
+    "median_tpot_ms": 72.45326762524795, "std_tpot_ms": 15.500402311776732, "p25_tpot_ms": 56.16945678805362, "p50_tpot_ms": 72.45326762524795, 
+    "p75_tpot_ms": 72.9204001456347, "p90_tpot_ms": 107.25460186866776, "p95_tpot_ms": 109.89283009014112, "p99_tpot_ms": 111.61372887445805, "mean_itl_ms": 72.2033161154511, 
+    "median_itl_ms": 55.814316030591726, "std_itl_ms": 132.05539409691616, "p25_itl_ms": 55.588595336303115, "p50_itl_ms": 55.814316030591726, "p75_itl_ms": 56.006025755777955, 
+    "p90_itl_ms": 56.18890570476651, "p95_itl_ms": 57.07099158316851, "p99_itl_ms": 875.8572241105139, "mean_e2el_ms": 5856.01924495399, "median_e2el_ms": 5865.580327343196, 
+    "std_e2el_ms": 83.8022250705344, "p25_e2el_ms": 5799.41390035674, "p50_e2el_ms": 5865.580327343196, "p75_e2el_ms": 5920.900681288913, "p90_e2el_ms": 5961.513260845095, 
+    "p95_e2el_ms": 5963.58030368574, "p99_e2el_ms": 5965.21894662641, "mean_power_consumption": 597.3222831050228, "median_power_consumption": 599.99, "std_power_consumption": 28.048280688519075, "p25_power_consumption": 599.87, "p50_power_consumption": 599.99, 
+    "p75_power_consumption": 600.145, "p90_power_consumption": 600.384, "p95_power_consumption": 600.783, "p99_power_consumption": 603.1827999999999}
+
+
+change to gpu
+
+    pip install pandas
+   13  source collect-data.sh 
+   14  pip install datasets
+   15  source collect-data.sh 
