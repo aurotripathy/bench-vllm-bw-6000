@@ -1,0 +1,733 @@
+Namespace(backend='vllm', base_url=None, host='127.0.0.1', port=8000, endpoint='/v1/completions', dataset_name='random', dataset_path=None, max_concurrency=25, model='RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic', tokenizer=None, use_beam_search=False, num_prompts=500, logprobs=None, request_rate=inf, burstiness=1.0, seed=0, trust_remote_code=False, disable_tqdm=False, profile=False, save_result=True, save_detailed=False, metadata=None, result_dir='/workspace/bench-vllm-bw-6000/vllm-result/results-4xRTX-llama-70b-5000in-fp8-dynamic-result/_8000/2500.50.25', result_filename=None, ignore_eos=True, percentile_metrics='ttft,tpot,itl,e2el', metric_percentiles='25,50,75,90,95,99', goodput=None, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, random_input_len=2500, random_output_len=50, random_range_ratio=0.0, random_prefix_len=0, hf_subset=None, hf_split=None, hf_output_len=None, top_p=None, top_k=None, min_p=None, temperature=None, tokenizer_mode='auto', served_model_name=None, lora_modules=None, target_max_prompt_len=None, include_time_series=False, time_interval_sec=10, enable_device_monitor='npu')
+Starting initial single prompt test run...
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: 25
+furiosa_smi_py module not found. Exiting process.
+Monitoring log file not found.
+============ Serving Benchmark Result ============
+Successful requests:                     500       
+Benchmark duration (s):                  796.43    
+Total input tokens:                      1250000   
+Total generated tokens:                  25000     
+Request throughput (req/s):              0.63      
+Output token throughput (tok/s):         31.39     
+Total Token throughput (tok/s):          1600.90   
+---------------Time to First Token----------------
+Mean TTFT (ms):                          13233.26  
+Median TTFT (ms):                        12351.28  
+P25 TTFT (ms):                           8373.10   
+P50 TTFT (ms):                           12351.28  
+P75 TTFT (ms):                           12394.69  
+P90 TTFT (ms):                           12428.36  
+P95 TTFT (ms):                           14080.90  
+P99 TTFT (ms):                           75111.22  
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          542.31    
+Median TPOT (ms):                        518.61    
+P25 TPOT (ms):                           516.80    
+P50 TPOT (ms):                           518.61    
+P75 TPOT (ms):                           599.77    
+P90 TPOT (ms):                           654.45    
+P95 TPOT (ms):                           657.17    
+P99 TPOT (ms):                           737.89    
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           542.31    
+Median ITL (ms):                         76.82     
+P25 ITL (ms):                            72.35     
+P50 ITL (ms):                            76.82     
+P75 ITL (ms):                            82.71     
+P90 ITL (ms):                            4088.14   
+P95 ITL (ms):                            4129.41   
+P99 ITL (ms):                            4162.29   
+----------------End-to-end Latency----------------
+Mean E2EL (ms):                          39806.33  
+Median E2EL (ms):                        37731.74  
+P25 E2EL (ms):                           37620.87  
+P50 E2EL (ms):                           37731.74  
+P75 E2EL (ms):                           37822.96  
+P90 E2EL (ms):                           37891.24  
+P95 E2EL (ms):                           40082.53  
+P99 E2EL (ms):                           99435.18  
+-----------Device Power Consumption(W)------------
+Mean Power Consumption:                  0.00      
+Median Power Consumption:                0.00      
+P25 Power Consumption:                   0.00      
+P50 Power Consumption:                   0.00      
+P75 Power Consumption:                   0.00      
+P90 Power Consumption:                   0.00      
+P95 Power Consumption:                   0.00      
+P99 Power Consumption:                   0.00      
+==================================================
+Namespace(backend='vllm', base_url=None, host='127.0.0.1', port=8000, endpoint='/v1/completions', dataset_name='random', dataset_path=None, max_concurrency=50, model='RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic', tokenizer=None, use_beam_search=False, num_prompts=500, logprobs=None, request_rate=inf, burstiness=1.0, seed=0, trust_remote_code=False, disable_tqdm=False, profile=False, save_result=True, save_detailed=False, metadata=None, result_dir='/workspace/bench-vllm-bw-6000/vllm-result/results-4xRTX-llama-70b-5000in-fp8-dynamic-result/_8000/2500.50.50', result_filename=None, ignore_eos=True, percentile_metrics='ttft,tpot,itl,e2el', metric_percentiles='25,50,75,90,95,99', goodput=None, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, random_input_len=2500, random_output_len=50, random_range_ratio=0.0, random_prefix_len=0, hf_subset=None, hf_split=None, hf_output_len=None, top_p=None, top_k=None, min_p=None, temperature=None, tokenizer_mode='auto', served_model_name=None, lora_modules=None, target_max_prompt_len=None, include_time_series=False, time_interval_sec=10, enable_device_monitor='npu')
+Starting initial single prompt test run...
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: 50
+furiosa_smi_py module not found. Exiting process.
+Monitoring log file not found.
+============ Serving Benchmark Result ============
+Successful requests:                     500       
+Benchmark duration (s):                  727.70    
+Total input tokens:                      1250000   
+Total generated tokens:                  25000     
+Request throughput (req/s):              0.69      
+Output token throughput (tok/s):         34.35     
+Total Token throughput (tok/s):          1752.09   
+---------------Time to First Token----------------
+Mean TTFT (ms):                          14214.33  
+Median TTFT (ms):                        12444.48  
+P25 TTFT (ms):                           12340.95  
+P50 TTFT (ms):                           12444.48  
+P75 TTFT (ms):                           12481.21  
+P90 TTFT (ms):                           13106.83  
+P95 TTFT (ms):                           37765.41  
+P99 TTFT (ms):                           63957.81  
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          1193.30   
+Median TPOT (ms):                        1228.96   
+P25 TPOT (ms):                           1206.76   
+P50 TPOT (ms):                           1228.96   
+P75 TPOT (ms):                           1232.61   
+P90 TPOT (ms):                           1309.85   
+P95 TPOT (ms):                           1343.35   
+P99 TPOT (ms):                           1410.65   
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           1193.30   
+Median ITL (ms):                         68.71     
+P25 ITL (ms):                            68.22     
+P50 ITL (ms):                            68.71     
+P75 ITL (ms):                            4039.16   
+P90 ITL (ms):                            4160.93   
+P95 ITL (ms):                            4186.31   
+P99 ITL (ms):                            4364.80   
+----------------End-to-end Latency----------------
+Mean E2EL (ms):                          72686.21  
+Median E2EL (ms):                        72636.99  
+P25 E2EL (ms):                           71459.02  
+P50 E2EL (ms):                           72636.99  
+P75 E2EL (ms):                           72836.74  
+P90 E2EL (ms):                           76109.56  
+P95 E2EL (ms):                           97306.95  
+P99 E2EL (ms):                           122904.49 
+-----------Device Power Consumption(W)------------
+Mean Power Consumption:                  0.00      
+Median Power Consumption:                0.00      
+P25 Power Consumption:                   0.00      
+P50 Power Consumption:                   0.00      
+P75 Power Consumption:                   0.00      
+P90 Power Consumption:                   0.00      
+P95 Power Consumption:                   0.00      
+P99 Power Consumption:                   0.00      
+==================================================
+Namespace(backend='vllm', base_url=None, host='127.0.0.1', port=8000, endpoint='/v1/completions', dataset_name='random', dataset_path=None, max_concurrency=75, model='RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic', tokenizer=None, use_beam_search=False, num_prompts=500, logprobs=None, request_rate=inf, burstiness=1.0, seed=0, trust_remote_code=False, disable_tqdm=False, profile=False, save_result=True, save_detailed=False, metadata=None, result_dir='/workspace/bench-vllm-bw-6000/vllm-result/results-4xRTX-llama-70b-5000in-fp8-dynamic-result/_8000/2500.50.75', result_filename=None, ignore_eos=True, percentile_metrics='ttft,tpot,itl,e2el', metric_percentiles='25,50,75,90,95,99', goodput=None, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, random_input_len=2500, random_output_len=50, random_range_ratio=0.0, random_prefix_len=0, hf_subset=None, hf_split=None, hf_output_len=None, top_p=None, top_k=None, min_p=None, temperature=None, tokenizer_mode='auto', served_model_name=None, lora_modules=None, target_max_prompt_len=None, include_time_series=False, time_interval_sec=10, enable_device_monitor='npu')
+Starting initial single prompt test run...
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: 75
+furiosa_smi_py module not found. Exiting process.
+Monitoring log file not found.
+============ Serving Benchmark Result ============
+Successful requests:                     500       
+Benchmark duration (s):                  716.11    
+Total input tokens:                      1250000   
+Total generated tokens:                  25000     
+Request throughput (req/s):              0.70      
+Output token throughput (tok/s):         34.91     
+Total Token throughput (tok/s):          1780.45   
+---------------Time to First Token----------------
+Mean TTFT (ms):                          18638.37  
+Median TTFT (ms):                        12529.87  
+P25 TTFT (ms):                           12469.00  
+P50 TTFT (ms):                           12529.87  
+P75 TTFT (ms):                           13118.75  
+P90 TTFT (ms):                           36927.41  
+P95 TTFT (ms):                           71608.23  
+P99 TTFT (ms):                           101991.04 
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          1803.86   
+Median TPOT (ms):                        1910.26   
+P25 TPOT (ms):                           1899.14   
+P50 TPOT (ms):                           1910.26   
+P75 TPOT (ms):                           1931.54   
+P90 TPOT (ms):                           1945.01   
+P95 TPOT (ms):                           2028.18   
+P99 TPOT (ms):                           2118.01   
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           1803.86   
+Median ITL (ms):                         95.11     
+P25 ITL (ms):                            93.70     
+P50 ITL (ms):                            95.11     
+P75 ITL (ms):                            4170.63   
+P90 ITL (ms):                            4222.97   
+P95 ITL (ms):                            4378.50   
+P99 ITL (ms):                            4384.51   
+----------------End-to-end Latency----------------
+Mean E2EL (ms):                          107027.30 
+Median E2EL (ms):                        106889.52 
+P25 E2EL (ms):                           105532.06 
+P50 E2EL (ms):                           106889.52 
+P75 E2EL (ms):                           107799.25 
+P90 E2EL (ms):                           130921.84 
+P95 E2EL (ms):                           165129.71 
+P99 E2EL (ms):                           195312.83 
+-----------Device Power Consumption(W)------------
+Mean Power Consumption:                  0.00      
+Median Power Consumption:                0.00      
+P25 Power Consumption:                   0.00      
+P50 Power Consumption:                   0.00      
+P75 Power Consumption:                   0.00      
+P90 Power Consumption:                   0.00      
+P95 Power Consumption:                   0.00      
+P99 Power Consumption:                   0.00      
+==================================================
+Namespace(backend='vllm', base_url=None, host='127.0.0.1', port=8000, endpoint='/v1/completions', dataset_name='random', dataset_path=None, max_concurrency=25, model='RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic', tokenizer=None, use_beam_search=False, num_prompts=500, logprobs=None, request_rate=inf, burstiness=1.0, seed=0, trust_remote_code=False, disable_tqdm=False, profile=False, save_result=True, save_detailed=False, metadata=None, result_dir='/workspace/bench-vllm-bw-6000/vllm-result/results-4xRTX-llama-70b-5000in-fp8-dynamic-result/_8000/2500.100.25', result_filename=None, ignore_eos=True, percentile_metrics='ttft,tpot,itl,e2el', metric_percentiles='25,50,75,90,95,99', goodput=None, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, random_input_len=2500, random_output_len=100, random_range_ratio=0.0, random_prefix_len=0, hf_subset=None, hf_split=None, hf_output_len=None, top_p=None, top_k=None, min_p=None, temperature=None, tokenizer_mode='auto', served_model_name=None, lora_modules=None, target_max_prompt_len=None, include_time_series=False, time_interval_sec=10, enable_device_monitor='npu')
+Starting initial single prompt test run...
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: 25
+furiosa_smi_py module not found. Exiting process.
+Monitoring log file not found.
+============ Serving Benchmark Result ============
+Successful requests:                     500       
+Benchmark duration (s):                  832.51    
+Total input tokens:                      1250000   
+Total generated tokens:                  50000     
+Request throughput (req/s):              0.60      
+Output token throughput (tok/s):         60.06     
+Total Token throughput (tok/s):          1561.55   
+---------------Time to First Token----------------
+Mean TTFT (ms):                          10807.93  
+Median TTFT (ms):                        12299.20  
+P25 TTFT (ms):                           8298.70   
+P50 TTFT (ms):                           12299.20  
+P75 TTFT (ms):                           12389.32  
+P90 TTFT (ms):                           12432.29  
+P95 TTFT (ms):                           13046.64  
+P99 TTFT (ms):                           29025.59  
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          311.13    
+Median TPOT (ms):                        297.23    
+P25 TPOT (ms):                           295.38    
+P50 TPOT (ms):                           297.23    
+P75 TPOT (ms):                           337.64    
+P90 TPOT (ms):                           352.03    
+P95 TPOT (ms):                           390.53    
+P99 TPOT (ms):                           393.02    
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           311.13    
+Median ITL (ms):                         77.47     
+P25 ITL (ms):                            73.31     
+P50 ITL (ms):                            77.47     
+P75 ITL (ms):                            82.60     
+P90 ITL (ms):                            89.86     
+P95 ITL (ms):                            2820.78   
+P99 ITL (ms):                            4147.78   
+----------------End-to-end Latency----------------
+Mean E2EL (ms):                          41609.49  
+Median E2EL (ms):                        41653.94  
+P25 E2EL (ms):                           41523.76  
+P50 E2EL (ms):                           41653.94  
+P75 E2EL (ms):                           41773.84  
+P90 E2EL (ms):                           41869.83  
+P95 E2EL (ms):                           42455.13  
+P99 E2EL (ms):                           57421.53  
+-----------Device Power Consumption(W)------------
+Mean Power Consumption:                  0.00      
+Median Power Consumption:                0.00      
+P25 Power Consumption:                   0.00      
+P50 Power Consumption:                   0.00      
+P75 Power Consumption:                   0.00      
+P90 Power Consumption:                   0.00      
+P95 Power Consumption:                   0.00      
+P99 Power Consumption:                   0.00      
+==================================================
+Namespace(backend='vllm', base_url=None, host='127.0.0.1', port=8000, endpoint='/v1/completions', dataset_name='random', dataset_path=None, max_concurrency=50, model='RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic', tokenizer=None, use_beam_search=False, num_prompts=500, logprobs=None, request_rate=inf, burstiness=1.0, seed=0, trust_remote_code=False, disable_tqdm=False, profile=False, save_result=True, save_detailed=False, metadata=None, result_dir='/workspace/bench-vllm-bw-6000/vllm-result/results-4xRTX-llama-70b-5000in-fp8-dynamic-result/_8000/2500.100.50', result_filename=None, ignore_eos=True, percentile_metrics='ttft,tpot,itl,e2el', metric_percentiles='25,50,75,90,95,99', goodput=None, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, random_input_len=2500, random_output_len=100, random_range_ratio=0.0, random_prefix_len=0, hf_subset=None, hf_split=None, hf_output_len=None, top_p=None, top_k=None, min_p=None, temperature=None, tokenizer_mode='auto', served_model_name=None, lora_modules=None, target_max_prompt_len=None, include_time_series=False, time_interval_sec=10, enable_device_monitor='npu')
+Starting initial single prompt test run...
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: 50
+furiosa_smi_py module not found. Exiting process.
+Monitoring log file not found.
+============ Serving Benchmark Result ============
+Successful requests:                     500       
+Benchmark duration (s):                  755.47    
+Total input tokens:                      1250000   
+Total generated tokens:                  50000     
+Request throughput (req/s):              0.66      
+Output token throughput (tok/s):         66.18     
+Total Token throughput (tok/s):          1720.78   
+---------------Time to First Token----------------
+Mean TTFT (ms):                          14238.79  
+Median TTFT (ms):                        12441.73  
+P25 TTFT (ms):                           12335.36  
+P50 TTFT (ms):                           12441.73  
+P75 TTFT (ms):                           12480.32  
+P90 TTFT (ms):                           13435.01  
+P95 TTFT (ms):                           36664.93  
+P99 TTFT (ms):                           66972.86  
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          618.45    
+Median TPOT (ms):                        636.27    
+P25 TPOT (ms):                           625.05    
+P50 TPOT (ms):                           636.27    
+P75 TPOT (ms):                           638.18    
+P90 TPOT (ms):                           675.34    
+P95 TPOT (ms):                           700.24    
+P99 TPOT (ms):                           744.48    
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           618.45    
+Median ITL (ms):                         68.68     
+P25 ITL (ms):                            68.27     
+P50 ITL (ms):                            68.68     
+P75 ITL (ms):                            69.36     
+P90 ITL (ms):                            4130.46   
+P95 ITL (ms):                            4157.73   
+P99 ITL (ms):                            4360.45   
+----------------End-to-end Latency----------------
+Mean E2EL (ms):                          75465.12  
+Median E2EL (ms):                        75400.47  
+P25 E2EL (ms):                           74279.38  
+P50 E2EL (ms):                           75400.47  
+P75 E2EL (ms):                           75635.04  
+P90 E2EL (ms):                           77851.19  
+P95 E2EL (ms):                           98829.40  
+P99 E2EL (ms):                           128532.38 
+-----------Device Power Consumption(W)------------
+Mean Power Consumption:                  0.00      
+Median Power Consumption:                0.00      
+P25 Power Consumption:                   0.00      
+P50 Power Consumption:                   0.00      
+P75 Power Consumption:                   0.00      
+P90 Power Consumption:                   0.00      
+P95 Power Consumption:                   0.00      
+P99 Power Consumption:                   0.00      
+==================================================
+Namespace(backend='vllm', base_url=None, host='127.0.0.1', port=8000, endpoint='/v1/completions', dataset_name='random', dataset_path=None, max_concurrency=75, model='RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic', tokenizer=None, use_beam_search=False, num_prompts=500, logprobs=None, request_rate=inf, burstiness=1.0, seed=0, trust_remote_code=False, disable_tqdm=False, profile=False, save_result=True, save_detailed=False, metadata=None, result_dir='/workspace/bench-vllm-bw-6000/vllm-result/results-4xRTX-llama-70b-5000in-fp8-dynamic-result/_8000/2500.100.75', result_filename=None, ignore_eos=True, percentile_metrics='ttft,tpot,itl,e2el', metric_percentiles='25,50,75,90,95,99', goodput=None, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, random_input_len=2500, random_output_len=100, random_range_ratio=0.0, random_prefix_len=0, hf_subset=None, hf_split=None, hf_output_len=None, top_p=None, top_k=None, min_p=None, temperature=None, tokenizer_mode='auto', served_model_name=None, lora_modules=None, target_max_prompt_len=None, include_time_series=False, time_interval_sec=10, enable_device_monitor='npu')
+Starting initial single prompt test run...
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: 75
+furiosa_smi_py module not found. Exiting process.
+Monitoring log file not found.
+============ Serving Benchmark Result ============
+Successful requests:                     500       
+Benchmark duration (s):                  748.29    
+Total input tokens:                      1250000   
+Total generated tokens:                  50000     
+Request throughput (req/s):              0.67      
+Output token throughput (tok/s):         66.82     
+Total Token throughput (tok/s):          1737.30   
+---------------Time to First Token----------------
+Mean TTFT (ms):                          18563.27  
+Median TTFT (ms):                        12535.58  
+P25 TTFT (ms):                           12468.23  
+P50 TTFT (ms):                           12535.58  
+P75 TTFT (ms):                           12961.66  
+P90 TTFT (ms):                           37751.71  
+P95 TTFT (ms):                           72617.79  
+P99 TTFT (ms):                           98909.93  
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          940.17    
+Median TPOT (ms):                        993.23    
+P25 TPOT (ms):                           988.09    
+P50 TPOT (ms):                           993.23    
+P75 TPOT (ms):                           1004.34   
+P90 TPOT (ms):                           1013.17   
+P95 TPOT (ms):                           1051.48   
+P99 TPOT (ms):                           1104.53   
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           940.17    
+Median ITL (ms):                         94.33     
+P25 ITL (ms):                            93.75     
+P50 ITL (ms):                            94.33     
+P75 ITL (ms):                            95.99     
+P90 ITL (ms):                            4184.01   
+P95 ITL (ms):                            4227.91   
+P99 ITL (ms):                            4379.28   
+----------------End-to-end Latency----------------
+Mean E2EL (ms):                          111639.68 
+Median E2EL (ms):                        111641.42 
+P25 E2EL (ms):                           110289.95 
+P50 E2EL (ms):                           111641.42 
+P75 E2EL (ms):                           112468.41 
+P90 E2EL (ms):                           136251.85 
+P95 E2EL (ms):                           170634.03 
+P99 E2EL (ms):                           196731.40 
+-----------Device Power Consumption(W)------------
+Mean Power Consumption:                  0.00      
+Median Power Consumption:                0.00      
+P25 Power Consumption:                   0.00      
+P50 Power Consumption:                   0.00      
+P75 Power Consumption:                   0.00      
+P90 Power Consumption:                   0.00      
+P95 Power Consumption:                   0.00      
+P99 Power Consumption:                   0.00      
+==================================================
+Namespace(backend='vllm', base_url=None, host='127.0.0.1', port=8000, endpoint='/v1/completions', dataset_name='random', dataset_path=None, max_concurrency=25, model='RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic', tokenizer=None, use_beam_search=False, num_prompts=500, logprobs=None, request_rate=inf, burstiness=1.0, seed=0, trust_remote_code=False, disable_tqdm=False, profile=False, save_result=True, save_detailed=False, metadata=None, result_dir='/workspace/bench-vllm-bw-6000/vllm-result/results-4xRTX-llama-70b-5000in-fp8-dynamic-result/_8000/2500.1500.25', result_filename=None, ignore_eos=True, percentile_metrics='ttft,tpot,itl,e2el', metric_percentiles='25,50,75,90,95,99', goodput=None, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, random_input_len=2500, random_output_len=1500, random_range_ratio=0.0, random_prefix_len=0, hf_subset=None, hf_split=None, hf_output_len=None, top_p=None, top_k=None, min_p=None, temperature=None, tokenizer_mode='auto', served_model_name=None, lora_modules=None, target_max_prompt_len=None, include_time_series=False, time_interval_sec=10, enable_device_monitor='npu')
+Starting initial single prompt test run...
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: 25
+furiosa_smi_py module not found. Exiting process.
+Monitoring log file not found.
+============ Serving Benchmark Result ============
+Successful requests:                     500       
+Benchmark duration (s):                  2962.43   
+Total input tokens:                      1250000   
+Total generated tokens:                  750000    
+Request throughput (req/s):              0.17      
+Output token throughput (tok/s):         253.17    
+Total Token throughput (tok/s):          675.12    
+---------------Time to First Token----------------
+Mean TTFT (ms):                          11106.33  
+Median TTFT (ms):                        12377.51  
+P25 TTFT (ms):                           8359.47   
+P50 TTFT (ms):                           12377.51  
+P75 TTFT (ms):                           12424.48  
+P90 TTFT (ms):                           12446.10  
+P95 TTFT (ms):                           12465.25  
+P99 TTFT (ms):                           32051.45  
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          91.39     
+Median TPOT (ms):                        91.10     
+P25 TPOT (ms):                           89.86     
+P50 TPOT (ms):                           91.10     
+P75 TPOT (ms):                           92.58     
+P90 TPOT (ms):                           95.00     
+P95 TPOT (ms):                           96.33     
+P99 TPOT (ms):                           98.21     
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           91.39     
+Median ITL (ms):                         75.63     
+P25 ITL (ms):                            71.86     
+P50 ITL (ms):                            75.63     
+P75 ITL (ms):                            79.87     
+P90 ITL (ms):                            84.14     
+P95 ITL (ms):                            86.87     
+P99 ITL (ms):                            94.35     
+----------------End-to-end Latency----------------
+Mean E2EL (ms):                          148105.84 
+Median E2EL (ms):                        148134.50 
+P25 E2EL (ms):                           147079.52 
+P50 E2EL (ms):                           148134.50 
+P75 E2EL (ms):                           149070.63 
+P90 E2EL (ms):                           149942.32 
+P95 E2EL (ms):                           150195.24 
+P99 E2EL (ms):                           164540.59 
+-----------Device Power Consumption(W)------------
+Mean Power Consumption:                  0.00      
+Median Power Consumption:                0.00      
+P25 Power Consumption:                   0.00      
+P50 Power Consumption:                   0.00      
+P75 Power Consumption:                   0.00      
+P90 Power Consumption:                   0.00      
+P95 Power Consumption:                   0.00      
+P99 Power Consumption:                   0.00      
+==================================================
+Namespace(backend='vllm', base_url=None, host='127.0.0.1', port=8000, endpoint='/v1/completions', dataset_name='random', dataset_path=None, max_concurrency=50, model='RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic', tokenizer=None, use_beam_search=False, num_prompts=500, logprobs=None, request_rate=inf, burstiness=1.0, seed=0, trust_remote_code=False, disable_tqdm=False, profile=False, save_result=True, save_detailed=False, metadata=None, result_dir='/workspace/bench-vllm-bw-6000/vllm-result/results-4xRTX-llama-70b-5000in-fp8-dynamic-result/_8000/2500.1500.50', result_filename=None, ignore_eos=True, percentile_metrics='ttft,tpot,itl,e2el', metric_percentiles='25,50,75,90,95,99', goodput=None, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, random_input_len=2500, random_output_len=1500, random_range_ratio=0.0, random_prefix_len=0, hf_subset=None, hf_split=None, hf_output_len=None, top_p=None, top_k=None, min_p=None, temperature=None, tokenizer_mode='auto', served_model_name=None, lora_modules=None, target_max_prompt_len=None, include_time_series=False, time_interval_sec=10, enable_device_monitor='npu')
+Starting initial single prompt test run...
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: 50
+furiosa_smi_py module not found. Exiting process.
+Monitoring log file not found.
+============ Serving Benchmark Result ============
+Successful requests:                     500       
+Benchmark duration (s):                  1747.99   
+Total input tokens:                      1250000   
+Total generated tokens:                  750000    
+Request throughput (req/s):              0.29      
+Output token throughput (tok/s):         429.06    
+Total Token throughput (tok/s):          1144.17   
+---------------Time to First Token----------------
+Mean TTFT (ms):                          14342.72  
+Median TTFT (ms):                        12479.56  
+P25 TTFT (ms):                           12370.44  
+P50 TTFT (ms):                           12479.56  
+P75 TTFT (ms):                           12531.73  
+P90 TTFT (ms):                           13428.08  
+P95 TTFT (ms):                           36681.72  
+P99 TTFT (ms):                           66976.65  
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          106.99    
+Median TPOT (ms):                        108.18    
+P25 TPOT (ms):                           107.54    
+P50 TPOT (ms):                           108.18    
+P75 TPOT (ms):                           108.36    
+P90 TPOT (ms):                           110.10    
+P95 TPOT (ms):                           112.44    
+P99 TPOT (ms):                           115.17    
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           106.99    
+Median ITL (ms):                         70.64     
+P25 ITL (ms):                            69.59     
+P50 ITL (ms):                            70.64     
+P75 ITL (ms):                            71.68     
+P90 ITL (ms):                            72.49     
+P95 ITL (ms):                            73.08     
+P99 ITL (ms):                            468.44    
+----------------End-to-end Latency----------------
+Mean E2EL (ms):                          174714.87 
+Median E2EL (ms):                        174660.84 
+P25 E2EL (ms):                           173623.28 
+P50 E2EL (ms):                           174660.84 
+P75 E2EL (ms):                           174903.49 
+P90 E2EL (ms):                           176914.60 
+P95 E2EL (ms):                           198012.95 
+P99 E2EL (ms):                           227764.47 
+-----------Device Power Consumption(W)------------
+Mean Power Consumption:                  0.00      
+Median Power Consumption:                0.00      
+P25 Power Consumption:                   0.00      
+P50 Power Consumption:                   0.00      
+P75 Power Consumption:                   0.00      
+P90 Power Consumption:                   0.00      
+P95 Power Consumption:                   0.00      
+P99 Power Consumption:                   0.00      
+==================================================
+Namespace(backend='vllm', base_url=None, host='127.0.0.1', port=8000, endpoint='/v1/completions', dataset_name='random', dataset_path=None, max_concurrency=75, model='RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic', tokenizer=None, use_beam_search=False, num_prompts=500, logprobs=None, request_rate=inf, burstiness=1.0, seed=0, trust_remote_code=False, disable_tqdm=False, profile=False, save_result=True, save_detailed=False, metadata=None, result_dir='/workspace/bench-vllm-bw-6000/vllm-result/results-4xRTX-llama-70b-5000in-fp8-dynamic-result/_8000/2500.1500.75', result_filename=None, ignore_eos=True, percentile_metrics='ttft,tpot,itl,e2el', metric_percentiles='25,50,75,90,95,99', goodput=None, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, random_input_len=2500, random_output_len=1500, random_range_ratio=0.0, random_prefix_len=0, hf_subset=None, hf_split=None, hf_output_len=None, top_p=None, top_k=None, min_p=None, temperature=None, tokenizer_mode='auto', served_model_name=None, lora_modules=None, target_max_prompt_len=None, include_time_series=False, time_interval_sec=10, enable_device_monitor='npu')
+Starting initial single prompt test run...
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: 75
+furiosa_smi_py module not found. Exiting process.
+Monitoring log file not found.
+============ Serving Benchmark Result ============
+Successful requests:                     500       
+Benchmark duration (s):                  1671.14   
+Total input tokens:                      1250000   
+Total generated tokens:                  750000    
+Request throughput (req/s):              0.30      
+Output token throughput (tok/s):         448.79    
+Total Token throughput (tok/s):          1196.79   
+---------------Time to First Token----------------
+Mean TTFT (ms):                          18687.32  
+Median TTFT (ms):                        12600.25  
+P25 TTFT (ms):                           12513.19  
+P50 TTFT (ms):                           12600.25  
+P75 TTFT (ms):                           13129.10  
+P90 TTFT (ms):                           36903.92  
+P95 TTFT (ms):                           71579.81  
+P99 TTFT (ms):                           101968.91 
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          151.08    
+Median TPOT (ms):                        157.26    
+P25 TPOT (ms):                           156.79    
+P50 TPOT (ms):                           157.26    
+P75 TPOT (ms):                           157.83    
+P90 TPOT (ms):                           158.34    
+P95 TPOT (ms):                           161.09    
+P99 TPOT (ms):                           163.99    
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           151.08    
+Median ITL (ms):                         97.32     
+P25 ITL (ms):                            95.43     
+P50 ITL (ms):                            97.32     
+P75 ITL (ms):                            99.08     
+P90 ITL (ms):                            100.24    
+P95 ITL (ms):                            100.95    
+P99 ITL (ms):                            4178.12   
+----------------End-to-end Latency----------------
+Mean E2EL (ms):                          245154.75 
+Median E2EL (ms):                        248898.68 
+P25 E2EL (ms):                           247580.15 
+P50 E2EL (ms):                           248898.68 
+P75 E2EL (ms):                           249940.45 
+P90 E2EL (ms):                           272776.00 
+P95 E2EL (ms):                           307137.03 
+P99 E2EL (ms):                           337355.85 
+-----------Device Power Consumption(W)------------
+Mean Power Consumption:                  0.00      
+Median Power Consumption:                0.00      
+P25 Power Consumption:                   0.00      
+P50 Power Consumption:                   0.00      
+P75 Power Consumption:                   0.00      
+P90 Power Consumption:                   0.00      
+P95 Power Consumption:                   0.00      
+P99 Power Consumption:                   0.00      
+==================================================
+Namespace(backend='vllm', base_url=None, host='127.0.0.1', port=8000, endpoint='/v1/completions', dataset_name='random', dataset_path=None, max_concurrency=25, model='RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic', tokenizer=None, use_beam_search=False, num_prompts=500, logprobs=None, request_rate=inf, burstiness=1.0, seed=0, trust_remote_code=False, disable_tqdm=False, profile=False, save_result=True, save_detailed=False, metadata=None, result_dir='/workspace/bench-vllm-bw-6000/vllm-result/results-4xRTX-llama-70b-5000in-fp8-dynamic-result/_8000/2500.5000.25', result_filename=None, ignore_eos=True, percentile_metrics='ttft,tpot,itl,e2el', metric_percentiles='25,50,75,90,95,99', goodput=None, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, random_input_len=2500, random_output_len=5000, random_range_ratio=0.0, random_prefix_len=0, hf_subset=None, hf_split=None, hf_output_len=None, top_p=None, top_k=None, min_p=None, temperature=None, tokenizer_mode='auto', served_model_name=None, lora_modules=None, target_max_prompt_len=None, include_time_series=False, time_interval_sec=10, enable_device_monitor='npu')
+Starting initial single prompt test run...
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: 25
+furiosa_smi_py module not found. Exiting process.
+Monitoring log file not found.
+============ Serving Benchmark Result ============
+Successful requests:                     500       
+Benchmark duration (s):                  9397.21   
+Total input tokens:                      1250000   
+Total generated tokens:                  2500000   
+Request throughput (req/s):              0.05      
+Output token throughput (tok/s):         266.04    
+Total Token throughput (tok/s):          399.05    
+---------------Time to First Token----------------
+Mean TTFT (ms):                          11139.92  
+Median TTFT (ms):                        12375.26  
+P25 TTFT (ms):                           8391.75   
+P50 TTFT (ms):                           12375.26  
+P75 TTFT (ms):                           12418.08  
+P90 TTFT (ms):                           12451.03  
+P95 TTFT (ms):                           12480.19  
+P99 TTFT (ms):                           32061.00  
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          91.76     
+Median TPOT (ms):                        91.70     
+P25 TPOT (ms):                           90.90     
+P50 TPOT (ms):                           91.70     
+P75 TPOT (ms):                           92.86     
+P90 TPOT (ms):                           93.19     
+P95 TPOT (ms):                           93.89     
+P99 TPOT (ms):                           94.42     
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           91.76     
+Median ITL (ms):                         86.02     
+P25 ITL (ms):                            79.45     
+P50 ITL (ms):                            86.02     
+P75 ITL (ms):                            93.94     
+P90 ITL (ms):                            101.45    
+P95 ITL (ms):                            105.85    
+P99 ITL (ms):                            114.48    
+----------------End-to-end Latency----------------
+Mean E2EL (ms):                          469842.61 
+Median E2EL (ms):                        469176.85 
+P25 E2EL (ms):                           464505.05 
+P50 E2EL (ms):                           469176.85 
+P75 E2EL (ms):                           475513.66 
+P90 E2EL (ms):                           477486.76 
+P95 E2EL (ms):                           477740.76 
+P99 E2EL (ms):                           490241.23 
+-----------Device Power Consumption(W)------------
+Mean Power Consumption:                  0.00      
+Median Power Consumption:                0.00      
+P25 Power Consumption:                   0.00      
+P50 Power Consumption:                   0.00      
+P75 Power Consumption:                   0.00      
+P90 Power Consumption:                   0.00      
+P95 Power Consumption:                   0.00      
+P99 Power Consumption:                   0.00      
+==================================================
+Namespace(backend='vllm', base_url=None, host='127.0.0.1', port=8000, endpoint='/v1/completions', dataset_name='random', dataset_path=None, max_concurrency=50, model='RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic', tokenizer=None, use_beam_search=False, num_prompts=500, logprobs=None, request_rate=inf, burstiness=1.0, seed=0, trust_remote_code=False, disable_tqdm=False, profile=False, save_result=True, save_detailed=False, metadata=None, result_dir='/workspace/bench-vllm-bw-6000/vllm-result/results-4xRTX-llama-70b-5000in-fp8-dynamic-result/_8000/2500.5000.50', result_filename=None, ignore_eos=True, percentile_metrics='ttft,tpot,itl,e2el', metric_percentiles='25,50,75,90,95,99', goodput=None, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, random_input_len=2500, random_output_len=5000, random_range_ratio=0.0, random_prefix_len=0, hf_subset=None, hf_split=None, hf_output_len=None, top_p=None, top_k=None, min_p=None, temperature=None, tokenizer_mode='auto', served_model_name=None, lora_modules=None, target_max_prompt_len=None, include_time_series=False, time_interval_sec=10, enable_device_monitor='npu')
+Starting initial single prompt test run...
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: 50
+furiosa_smi_py module not found. Exiting process.
+Monitoring log file not found.
+============ Serving Benchmark Result ============
+Successful requests:                     500       
+Benchmark duration (s):                  4463.50   
+Total input tokens:                      1250000   
+Total generated tokens:                  2500000   
+Request throughput (req/s):              0.11      
+Output token throughput (tok/s):         560.10    
+Total Token throughput (tok/s):          840.15    
+---------------Time to First Token----------------
+Mean TTFT (ms):                          14362.08  
+Median TTFT (ms):                        12533.30  
+P25 TTFT (ms):                           12428.29  
+P50 TTFT (ms):                           12533.30  
+P75 TTFT (ms):                           12646.78  
+P90 TTFT (ms):                           13443.15  
+P95 TTFT (ms):                           36685.03  
+P99 TTFT (ms):                           66974.82  
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          86.40     
+Median TPOT (ms):                        86.72     
+P25 TPOT (ms):                           86.63     
+P50 TPOT (ms):                           86.72     
+P75 TPOT (ms):                           86.85     
+P90 TPOT (ms):                           87.54     
+P95 TPOT (ms):                           87.98     
+P99 TPOT (ms):                           88.89     
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           86.40     
+Median ITL (ms):                         75.50     
+P25 ITL (ms):                            71.93     
+P50 ITL (ms):                            75.50     
+P75 ITL (ms):                            78.85     
+P90 ITL (ms):                            80.84     
+P95 ITL (ms):                            81.63     
+P99 ITL (ms):                            83.32     
+----------------End-to-end Latency----------------
+Mean E2EL (ms):                          446258.74 
+Median E2EL (ms):                        446091.94 
+P25 E2EL (ms):                           445692.18 
+P50 E2EL (ms):                           446091.94 
+P75 E2EL (ms):                           446694.38 
+P90 E2EL (ms):                           448488.44 
+P95 E2EL (ms):                           469831.32 
+P99 E2EL (ms):                           499738.71 
+-----------Device Power Consumption(W)------------
+Mean Power Consumption:                  0.00      
+Median Power Consumption:                0.00      
+P25 Power Consumption:                   0.00      
+P50 Power Consumption:                   0.00      
+P75 Power Consumption:                   0.00      
+P90 Power Consumption:                   0.00      
+P95 Power Consumption:                   0.00      
+P99 Power Consumption:                   0.00      
+==================================================
+Namespace(backend='vllm', base_url=None, host='127.0.0.1', port=8000, endpoint='/v1/completions', dataset_name='random', dataset_path=None, max_concurrency=75, model='RedHatAI/Llama-3.3-70B-Instruct-FP8-dynamic', tokenizer=None, use_beam_search=False, num_prompts=500, logprobs=None, request_rate=inf, burstiness=1.0, seed=0, trust_remote_code=False, disable_tqdm=False, profile=False, save_result=True, save_detailed=False, metadata=None, result_dir='/workspace/bench-vllm-bw-6000/vllm-result/results-4xRTX-llama-70b-5000in-fp8-dynamic-result/_8000/2500.5000.75', result_filename=None, ignore_eos=True, percentile_metrics='ttft,tpot,itl,e2el', metric_percentiles='25,50,75,90,95,99', goodput=None, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, random_input_len=2500, random_output_len=5000, random_range_ratio=0.0, random_prefix_len=0, hf_subset=None, hf_split=None, hf_output_len=None, top_p=None, top_k=None, min_p=None, temperature=None, tokenizer_mode='auto', served_model_name=None, lora_modules=None, target_max_prompt_len=None, include_time_series=False, time_interval_sec=10, enable_device_monitor='npu')
+Starting initial single prompt test run...
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: 75
+furiosa_smi_py module not found. Exiting process.
+Monitoring log file not found.
+============ Serving Benchmark Result ============
+Successful requests:                     500       
+Benchmark duration (s):                  4208.82   
+Total input tokens:                      1250000   
+Total generated tokens:                  2500000   
+Request throughput (req/s):              0.12      
+Output token throughput (tok/s):         593.99    
+Total Token throughput (tok/s):          890.99    
+---------------Time to First Token----------------
+Mean TTFT (ms):                          18881.94  
+Median TTFT (ms):                        12861.81  
+P25 TTFT (ms):                           12601.55  
+P50 TTFT (ms):                           12861.81  
+P75 TTFT (ms):                           13138.49  
+P90 TTFT (ms):                           37016.86  
+P95 TTFT (ms):                           71686.09  
+P99 TTFT (ms):                           102072.06 
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          118.70    
+Median TPOT (ms):                        122.74    
+P25 TPOT (ms):                           122.63    
+P50 TPOT (ms):                           122.74    
+P75 TPOT (ms):                           122.88    
+P90 TPOT (ms):                           122.98    
+P95 TPOT (ms):                           123.79    
+P99 TPOT (ms):                           124.61    
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           118.70    
+Median ITL (ms):                         103.32    
+P25 ITL (ms):                            97.61     
+P50 ITL (ms):                            103.32    
+P75 ITL (ms):                            109.32    
+P90 ITL (ms):                            112.85    
+P95 ITL (ms):                            114.11    
+P99 ITL (ms):                            116.47    
+----------------End-to-end Latency----------------
+Mean E2EL (ms):                          612275.52 
+Median E2EL (ms):                        626794.10 
+P25 E2EL (ms):                           624745.32 
+P50 E2EL (ms):                           626794.10 
+P75 E2EL (ms):                           627655.33 
+P90 E2EL (ms):                           650078.46 
+P95 E2EL (ms):                           685131.91 
+P99 E2EL (ms):                           715522.91 
+-----------Device Power Consumption(W)------------
+Mean Power Consumption:                  0.00      
+Median Power Consumption:                0.00      
+P25 Power Consumption:                   0.00      
+P50 Power Consumption:                   0.00      
+P75 Power Consumption:                   0.00      
+P90 Power Consumption:                   0.00      
+P95 Power Consumption:                   0.00      
+P99 Power Consumption:                   0.00      
+==================================================
+/workspace/bench-vllm-bw-6000
